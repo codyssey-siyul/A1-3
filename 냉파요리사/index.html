@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>뚝딱! 냉파 요리사</title>
+  <meta
+    name="description"
+    content="냉장고 속 남은 재료를 입력하면 AI가 간단한 냉파 레시피를 추천해드려요."
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="주요 메뉴">
+      <a class="logo" href="#home" aria-label="뚝딱 냉파 요리사 홈">
+        <span aria-hidden="true">🍳</span>
+        <span>뚝딱! 냉파 요리사</span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links">
+        <a href="#home">홈</a>
+        <a href="#recipe">레시피 추천</a>
+        <a href="#tips">이용 꿀팁</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. 홈 -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">냉장고 속 재료, 맛있게 비우는 방법</p>
+        <h1>오늘 뭐 먹지?<br />AI 냉파 요리사에게 물어보세요!</h1>
+        <p class="hero-description">
+          남은 재료를 입력하면 요리 초보자도 쉽게 따라 할 수 있는
+          간단하고 실용적인 레시피를 추천해드려요.
+        </p>
+        <a class="primary-button" href="#recipe">✨ 레시피 추천받기</a>
+
+        <div class="how-to-use">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <span class="step-icon">🥕</span>
+            <h2>재료 입력</h2>
+            <p>냉장고에 남은 재료를 적어요.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <span class="step-icon">🧑‍🍳</span>
+            <h2>스타일 선택</h2>
+            <p>원하는 요리 스타일을 골라요.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <span class="step-icon">🍽️</span>
+            <h2>레시피 완성</h2>
+            <p>AI 추천 레시피를 따라 만들어요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 레시피 추천 -->
+    <section id="recipe" class="recipe-section section">
+      <div class="container">
+        <p class="eyebrow">AI 맞춤 레시피</p>
+        <h2 class="section-title">냉장고 속 재료로<br />무엇을 만들어 볼까요?</h2>
+        <p class="section-description">
+          재료를 쉼표(,)로 구분해 입력해 주세요.
+        </p>
+
+        <div class="recipe-layout">
+          <form id="recipe-form" class="recipe-form">
+            <label for="ingredients">남은 식재료 <span aria-hidden="true">*</span></label>
+            <textarea
+              id="ingredients"
+              name="ingredients"
+              rows="5"
+              placeholder="예: 계란, 양파, 스팸, 밥"
+              required
+            ></textarea>
+            <p class="field-help">기본 양념(소금, 식용유, 간장 등)은 AI가 알아서 고려해요.</p>
+
+            <label for="style">원하는 요리 스타일</label>
+            <select id="style" name="style">
+              <option value="상관없음">상관없음</option>
+              <option value="한식">한식</option>
+              <option value="양식">양식</option>
+              <option value="중식">중식</option>
+              <option value="일식">일식</option>
+            </select>
+
+            <button id="submit-button" class="primary-button full-button" type="submit">
+              ✨ 레시피 추천받기
+            </button>
+          </form>
+
+          <div id="result-area" class="result-area" aria-live="polite">
+            <div class="result-placeholder">
+              <span>🍲</span>
+              <h3>맛있는 아이디어를 준비할게요!</h3>
+              <p>왼쪽에 재료를 입력하고<br />추천 버튼을 눌러보세요.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 이용 꿀팁 -->
+    <section id="tips" class="tips-section section">
+      <div class="container">
+        <p class="eyebrow">요리 초보자를 위한</p>
+        <h2 class="section-title">냉파를 더 쉽게 만드는 이용 꿀팁</h2>
+
+        <div class="tips-grid">
+          <article class="tip-card">
+            <span class="tip-icon">✍️</span>
+            <h3>재료는 자세히 입력해요</h3>
+            <p>
+              “계란 2개, 양파 반 개, 밥 한 공기”처럼 재료와 양을 함께 적으면
+              더 알맞은 레시피를 받을 수 있어요.
+            </p>
+          </article>
+
+          <article class="tip-card">
+            <span class="tip-icon">🧂</span>
+            <h3>기본 양념을 준비해요</h3>
+            <p>
+              소금, 식용유, 간장, 설탕, 후추는 대부분의 간단한 요리에
+              활용할 수 있는 든든한 기본 양념이에요.
+            </p>
+          </article>
+
+          <article class="tip-card">
+            <span class="tip-icon">🥬</span>
+            <h3>채소는 물기를 닦아 보관해요</h3>
+            <p>
+              남은 채소는 물기를 닦고 키친타월로 감싸 보관하면
+              더 오래 신선하게 사용할 수 있어요.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>🍳 뚝딱! 냉파 요리사</p>
+      <p>냉장고 속 재료를 맛있게 비워보세요.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

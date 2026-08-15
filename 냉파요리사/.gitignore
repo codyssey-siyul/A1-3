@@ -1,0 +1,14 @@
+# API 키가 들어 있는 개인 설정 파일
+.env
+.env.local
+
+# Vercel이 컴퓨터에 만드는 설정 폴더
+.vercel
+
+# Python이 자동으로 만드는 임시 파일
+__pycache__/
+*.pyc
+
+# 운영체제가 자동으로 만드는 파일
+.DS_Store
+Thumbs.db
