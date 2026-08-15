@@ -79,7 +79,7 @@ class handler(BaseHTTPRequestHandler):
 
             url = (
                 "https://generativelanguage.googleapis.com/v1beta/"
-                f"models/gemini-2.5-flash:generateContent?key={api_key}"
+                f"models/gemini-3.5-flash-lite:generateContent?key={api_key}"
             )
 
             request = urllib.request.Request(
