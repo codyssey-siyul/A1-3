@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap");
-
 :root {
   --cream: #fffaf0;
   --orange: #f47b36;
@@ -29,6 +28,7 @@ body {
   background: var(--cream);
   font-family: "Gowun Dodum", sans-serif;
   line-height: 1.65;
+  word-break: keep-all;
 }
 
 button,
@@ -138,10 +138,12 @@ h1 {
 }
 
 .hero-description {
-  width: min(620px, 100%);
+  width: auto;
+  max-width: none;
   margin: 22px auto 30px;
   color: var(--muted);
   font-size: 1.08rem;
+  white-space: nowrap;
 }
 
 .primary-button {
@@ -239,7 +241,7 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 25px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .recipe-form,
@@ -481,4 +483,40 @@ select:focus {
   .result-placeholder {
     min-height: 250px;
   }
+}
+
+.cold-word {
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: var(--orange);
+}
+
+.hero-ai-title {
+  display: inline-block;
+  word-break: keep-all;
+}
+
+.tips-title span {
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .eyebrow {
+    word-break: keep-all;
+  }
+
+  .hero-ai-title {
+    max-width: 100%;
+  }
+
+  .tips-title {
+    max-width: 100%;
+    word-break: keep-all;
+
+  }.hero-description {
+  width: 100%;
+  white-space: normal;
+}
+
 }
