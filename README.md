@@ -21,10 +21,36 @@
 * **방문자 분석 환경 구축:** Vercel Web Analytics를 연동하여 실시간 접속자 및 페이지 뷰(Page Views) 트래픽 측정 도입
 
 ## 5. 실행 및 배포 방법
-1. **GitHub 연동 배포:** 
-   * 완성된 코드를 GitHub Repository에 Push한다.
-   * Vercel 대시보드에서 해당 Repository를 Import하여 배포(Deploy)한다.
-   * 이후 `main` 브랜치에 코드가 푸시될 때마다 자동으로 CI/CD 재배포가 이루어진다.
+
+### 1) 로컬 환경에서 실행(Local Execution)
+이 프로젝트는 프론트엔드와 Vercel Serverless Functions(Python 백엔드)가 결합되어 있다. 로컬 환경에서 API 통신까지 정상적으로 테스트하려면 Vercel CLI를 사용해야 한다.
+
+1. 이 저장소를 로컬 컴퓨터로 클론(Clone)
+   ```bash
+   git clone [본인의 GitHub 저장소 URL]
+
+2. 프로젝트 폴더로 이동
+   ```bash
+   cd 냉파요리사
+   
+3. Vercel CLI 설치(Node.js 환경 필요)
+   ```bash
+   npm i -g vercel
+   
+4. 로컬 테스트 서버 실행
+   ```bash
+   vercel dev
+
+5. 브라우저에서 http://localhost:3000으로 접속하여 정상 동작 확인
+
+
+### 2) 클라우드 배포 방법(Deployment)
+Vercel과 Github 연동을 통한 자동 배포(CI/CD) 방식을 사용한다.  
+
+1. 작업이 완료된 코드를 Github Repository에 Commit 및 Push  
+2. Vercel 대시보드에서 Add New Project를 통해 해당 GitHub Repository를 Import  
+3. 환경 변수(GEMINI_API_KEY)를 설정한 후 Deploy 버튼을 누르면 서버리스 환경으로 자동 배포  
+4. 이후 main 브랜치에 코드가 푸시(Push)될 때마다 변경 사항이 자동으로 감지되어 재배포  
 
 ## 6. 환경 변수(API 키) 설정 방법
 이 프로젝트는 AI 호출을 위해 Google Gemini API 키가 필요하며, 보안을 위해 환경 변수로 분리하여 관리
