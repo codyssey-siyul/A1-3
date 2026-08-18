@@ -7,7 +7,7 @@
 * **서비스 접속 링크:** [https://a1-3-2jvc.vercel.app/]
 
 ## 3. 기술 스택 (Tech Stack)
-* **Frontend:** HTML5, CSS3, Vanilla JavaScript
+* **Frontend:** HTML, CSS, Vanilla JavaScript
 * **Backend:** Python, Vercel Serverless Functions (`/api` 엔드포인트)
 * **AI Model:** Google Gemini API
 * **Deployment & Version Control:** Vercel, GitHub
@@ -45,7 +45,7 @@
 
 
 ### 2) 클라우드 배포 방법(Deployment)
-Vercel과 Github 연동을 통한 자동 배포(CI/CD) 방식을 사용한다.  
+Vercel과 Github 연동을 통해 배포 자동화 파이프라인을 구축하였다.  
 
 1. 작업이 완료된 코드를 Github Repository에 Commit 및 Push  
 2. Vercel 대시보드에서 Add New Project를 통해 해당 GitHub Repository를 Import  
